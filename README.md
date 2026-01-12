@@ -42,6 +42,9 @@ in the config file (this is the more precise way at the moment; default disabled
 The terminal needed by non-graphical applications must support the '-e' option,
 and its name must be setted in the config file.
 
-Known issues:
+Under wayland, some properties must be setted in the config file of the 
+used window manager, such as the decoration or the position.
+
+Known issue:
 - the bookmarks sometimes cannot be reordered.
 

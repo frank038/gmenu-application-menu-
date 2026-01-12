@@ -1,0 +1,8 @@
+window { border: 2px solid; border-color: #1F8A42; }
+#mybutton:checked { border: 2px solid; border-color: #1F8A42; }
+#mybutton { font: 12px Sans; }
+/* #mybutton:focus { border: 2px solid; border-color: red; } */
+/* #mybutton:active { border: 2px solid; border-color: red; } */
+#myclabel { font: 12px Sans; }
+#myiconview { }
+#mysearchentry { }

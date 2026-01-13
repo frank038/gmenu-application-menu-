@@ -1,14 +1,14 @@
-# category layout: 1 top (without label) - 2 left - 3 right
+# category layout: 1 top (without labels) - 2 left - 3 right
 CAT_LAYOUT=1
 # start in hidden state: 0 no - 1 yes
 START_HIDDEN=1
 # terminal: a "command" or "" to use the default (needs to support the -e option)
 TERMINAL="xterm"
 # hide on focus lost: 0 no - 1 yes
-CLOSE_FOCUS_LOST=0
+CLOSE_FOCUS_LOST=1
 # category button icon size
 BTN_ICON_SIZE=64
-# category button label (disables tooltip): 0 no - 1 yes
+# category button label (disables tooltips): 0 no - 1 yes
 BTN_USE_LABEL=0
 # icon size of the applications in the icon view
 ICON_SIZE=64

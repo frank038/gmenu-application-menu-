@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# V. 0.9.2
+# V. 0.9.3
 
 import gi
 gi.require_version('Gtk', '3.0')
@@ -377,7 +377,11 @@ class MainWindow(Gtk.Window):
     
     def on_show(self, e):
         if WIN_POSITION != "":
-            self.move(int(self.WX),int(self.WY))
+            try:
+                if int(self.WX) >= 0 and int(self.WY) >= 0:
+                    self.move(int(self.WX),int(self.WY))
+            except:
+                return
     
     def _to_close(self, w=None, e=None):
         if w != None or e != None:
@@ -670,7 +674,7 @@ class MainWindow(Gtk.Window):
         # check the exec is in path
         if APP_EXISTS == 1:
             if not shutil.which(_to_exec):
-                dialog = ynDialog(self, "The exec\n{}\ncannot be found.\n Does execute it anyway?".format(_to_exec), "Question")
+                dialog = ynDialog(self, "The exec\n{}\ncannot be found.\n Execute it anyway?".format(_to_exec), "Question")
                 response = dialog.run()
                 if response == Gtk.ResponseType.OK:
                     dialog.destroy()
